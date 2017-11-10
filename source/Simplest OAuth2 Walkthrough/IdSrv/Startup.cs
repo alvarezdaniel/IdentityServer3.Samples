@@ -14,6 +14,9 @@ namespace IdSrv
                             .UseInMemoryScopes(Scopes.Get())
                             .UseInMemoryUsers(Users.Get()),
 
+                LoggingOptions = new LoggingOptions { EnableHttpLogging = true, EnableKatanaLogging = true, EnableWebApiDiagnostics = true },
+                EventsOptions = new EventsOptions { RaiseErrorEvents = true, RaiseFailureEvents = true, RaiseInformationEvents = true, RaiseSuccessEvents = true },
+
                 RequireSsl = false
             };
 
